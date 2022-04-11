@@ -1,0 +1,19 @@
+local groupID = 10088730 -- Change this to the ID of the group for whitelist
+
+
+
+
+local plr = game.Players.LocalPlayer -- The player
+
+script.Parent.Enabled = false -- Auto disabled
+repear wait() until plr.Character -- Waits for the player to load
+
+local gui = script.Parent
+
+
+
+if plr:IsInGroup(groupID) then -- if they're in the group
+    script.Parent.Enabled = true -- shows the Gui
+else
+    script.Parent:Destroy() -- Removes the Gui
+end
